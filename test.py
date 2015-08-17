@@ -1,16 +1,19 @@
-class Ex:
-    'String doc'
-    count = 0
+import random
+strings = 'awertyhgjkbmlciogxwq'
+arr = []
 
-    def __init__(self, name, intt):
-        self.name = name
-        self.salary = intt
+for i in range(0, 10):
+    keyRandom = random.randrange(len(strings))
+    arr.append(strings[keyRandom])
 
-    def showf(self):
-        print('SHow Name {0} SHow INT{1}'.format(self.name, self.salary))
+print('Du lieu mau : {0}'.format(arr))
+print('Mang sau khi sap xep la :')
 
+for i in range(0, len(arr)):
+    for j in range(i, len(arr)):
+        if arr[i] < arr[j]:
+            tg = arr[i]
+            arr[i] = arr[j]
+            arr[j] = tg
 
-ob = Ex('tienvm', 4)
-ob.showf()
-print(ob.count)
-print(Ex.__base__)
+print(arr)
