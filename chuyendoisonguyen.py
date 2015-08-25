@@ -7,7 +7,7 @@ def convert(n):
         str += '0'
     return int(str)
 
-a = 4567293847
+a = 534534
 arr = ['Khong', 'Mot', 'Hai', 'Ba', 'Bon', 'Nam', 'Sau', 'Bay', 'Tam', 'Chin']
 
 if isinstance(a, int):
@@ -19,10 +19,10 @@ if isinstance(a, int):
 
         if i % 9 == 1 and int(i / 9):
             print(' Ty " ', end='')
+        elif i % 3 == 1 and int(i / 3) > 0 and i % 6 != 1:
+            print(' Nghin " ', end='')
         elif i % 6 == 1 and int(i / 6):
             print(' Trieu " ', end='')
-        elif i % 3 == 1 and int(i / 3) > 0:
-            print(' Nghin " ', end='')
         if i % 3 == 0 and i > 2:
             print(' Tram . ', end='')
 
